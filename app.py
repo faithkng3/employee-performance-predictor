@@ -20,7 +20,7 @@ Identify statistically likely **Outstanding performers** before they are hired u
 # 2. LOAD THE PRODUCTION MODEL (Safe Mode)
 
 try:
-    model_path = 'C:\Users\Administrator\Desktop\models\final_hiring_model.pkl' 
+    model_path = 'models/final_hiring_model.pkl'
     model = joblib.load(model_path)
 except Exception as e:
     st.error(f"❌ Failed to load model. Check the file path: {e}")
@@ -28,10 +28,10 @@ except Exception as e:
 
 
 # 3. CREATE THE USER INPUT FORM (Sidebar)
-st.sidebar.header("📝 Applicant Information")
+st.sidebar.header("📝 Applicant's Information")
 
 # Input 1: Age
-age = st.sidebar.slider("1. Applicant Age", 18, 60, 30)
+age = st.sidebar.slider("1. Age", 18, 60, 30)
 
 # Input 2: Total Work Experience
 experience = st.sidebar.slider("2. Total Work Experience (Years)", 0, 40, 5)
