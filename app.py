@@ -20,7 +20,7 @@ Identify statistically likely **Outstanding performers** before they are hired u
 # 2. LOAD THE PRODUCTION MODEL (Safe Mode)
 
 try:
-    model_path = '../models/final_hiring_model.pkl' 
+    model_path = 'C:\Users\Administrator\Desktop\models\final_hiring_model.pkl' 
     model = joblib.load(model_path)
 except Exception as e:
     st.error(f"❌ Failed to load model. Check the file path: {e}")
